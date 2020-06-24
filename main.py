@@ -41,7 +41,7 @@ def send_fact_message():
     num=random.randint(0, len(facts))
     bot.send_message(-1001403887404, "Вечерний факт: " + facts[num])
 schedule.every().day.at("09:00").do(send_covid_message)
-schedule.every().day.at("18:00").do(send_fact_message)
+schedule.every().day.at("17:00").do(send_fact_message)
 while True:
     schedule.run_pending()
     time.sleep(1)
